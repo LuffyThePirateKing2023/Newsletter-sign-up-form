@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Newsletter sign-up form with success message</title>
+
+</head>
+<body>
+    <div class="wrapper" id="homeForm">
+      <div class="textarea">
+          <h1>Stay updated!</h1>
+          <p class="content-area">Join 60,000+ product managers receiving monthly updates on :</p>
+
+          <p class="features">Product discovery and building what matters</p>
+          <p class="features">Measuring to ensure updates are a success</p>
+          <p class="features">And much more!</p>
+
+          <div class="errormessagearea">
+          <h5>Email address</h5>
+          <p id="errormessagetext"></p>
+        </div>
+
+          <div class="input-email">
+              <input type="email" class="email" placeholder="email@company.com" id="email" autocomplete="off">
+          </div>
+
+          <button id="subscribebtn">Subscribe to monthly newsletter</button>
+
+      </div>
+      <div class="design-area">
+        <div class="img"></div>
+      </div> 
+    </div>
+
+    <div class="success-wrapper hidden" id="successForm">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+        <defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/>
+        </linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/>
+        <path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g></svg>
+
+          <h1>Thanks for subscribing!</h1>
+
+          <p>A confirmation email has been sent to <b><span id="email-input-result"></span></b>. Please open it and click the button inside to confirm your subscription.
+          </p>
+        <button id="successbtn" class="successbtn">Dismiss message</button>
+    </div>
+  <script src="index.js"></script>
+</body>
+</html>

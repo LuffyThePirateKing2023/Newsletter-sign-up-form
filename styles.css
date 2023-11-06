@@ -1,0 +1,258 @@
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: var(--Charcoal-Grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1440px;
+    min-height: 100vh;
+}
+.wrapper{
+    width: 50%;
+    height: 580px;
+    background-color: var(--White);
+    border-radius: 50px;
+    display: flex;
+    position: absolute;
+    z-index: 1111;
+}
+.hidden{
+    opacity: 0;
+    z-index: -99999;
+}
+.textarea{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.textarea h1{
+    text-align: center;
+    margin-top: 60px;
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.textarea .content-area{
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 20px;
+    margin: 20px 20px;
+}
+.textarea .features{
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+.textarea .features::before{
+    content: "\f058";
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: var(--Tomato);
+    margin: 0 15px;
+}
+.textarea .errormessagearea{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 40px;
+    padding: 0 8px;
+}
+.textarea .errormessagearea h5{
+    font-size: 18px;
+}
+.textarea .errormessagearea p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--Tomato);
+}
+.textarea .email{
+    width: 90%;
+    height: 50px;
+    padding-left: 20px;
+    margin: 5px 20px 10px 32px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 2px solid var(--Grey);
+    outline: none;
+}
+.textarea input:focus{
+    border: 3px solid var(--Charcoal-Grey);    
+}
+.textarea button{
+    width: 90%;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    margin: 10px 20px 10px 32px;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.textarea button:hover{
+    background-color: var(--Tomato);
+}
+.design-area{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7%;
+}
+.design-area .img{
+    width: 98%;
+    height: 95%;
+    background-image: url(/assets/images/illustration-sign-up-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.success-wrapper{
+    width: 450px;
+    height: 450px;
+    background-color: var(--White);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 45px 20px 20px 45px;
+    position: absolute;
+}
+.success-wrapper svg{
+    margin-bottom: 30px;
+}
+.success-wrapper h1{
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.success-wrapper p{
+    font-size: 16px;
+    font-weight: 400;
+    word-spacing: 2px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.success-wrapper .successbtn{
+    width: 90%;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    margin: 10px 20px 10px 0;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.success-wrapper .successbtn:hover{
+    background-color: var(--Tomato);
+}
+@media screen and (max-width: 768px){
+   body{
+        display: unset;
+        width: 100%;
+        min-height:50vh;
+   }
+   .wrapper{
+        width: 46.5%;
+        height: 700px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+        border-radius: 0;
+   }
+   .textarea{
+        width: 100%;
+        min-height: 50vh;
+   }
+   .design-area{
+        width: 100%;
+        height: 700px;
+        margin: 0;
+   }
+   .design-area .img{
+        position: relative;
+        background-image: url(/assets/images/illustration-sign-up-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0 0 40px 40px;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+   }
+   .textarea h1{
+        margin-top: 10px;
+        font-size: 30px;
+   }
+   
+   .textarea .content-area, .textarea .features{
+        font-size: 14px;
+        padding: 0;
+        margin: 7px 0;
+   }
+   .textarea .content-area{
+        padding-left: 10px;
+   }
+   .textarea .errormessagearea{
+        margin: 25px 0 5px 0;
+   }
+   .textarea .errormessagearea h5{
+        font-size: 13px;
+   }
+   .textarea .errormessagearea p{
+        font-size: 12px;
+   }
+   .textarea .email{
+        margin: 15px 0px 10px 0px;
+        font-size: 16px;
+        height: 40px;
+   }
+   .textarea button{
+        margin: 15px 0px 10px 0px;
+        font-size: 14px;
+        height: 40px;
+   }
+   .success-wrapper{
+        width: 47%;
+        height: 700px;
+        border-radius: 0;
+   }
+   .success-wrapper h1{
+        font-size: 35px;
+        margin: 20px 0;
+   }
+   .success-wrapper p{
+        font-size: 14px;
+        margin: 20px 0;
+   }
+   .success-wrapper .successbtn{
+        margin: 60px 0 0 0;
+        height: 40px;
+        font-size: 15px;
+   }
+}
