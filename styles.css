@@ -124,7 +124,7 @@ body{
 .design-area .img{
     width: 98%;
     height: 95%;
-    background-image: url("./assets/images/desktop.PNG");
+    background-image: url("desktop.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -196,7 +196,7 @@ body{
    }
    .design-area .img{
         position: relative;
-        background-image: url("./assets/images/mobile.PNG");
+        background-image: url("mobile.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
